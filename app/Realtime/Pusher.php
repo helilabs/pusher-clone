@@ -35,7 +35,7 @@ class Pusher extends Client{
 
     private function uniqueChannelName($payload)
     {
-        return str_replace('-','.', $payload->app_id . '-' . $payload->channel);
+        return str_replace('-','_', $payload->app_id . '_' . $payload->channel);
     }
 
 }
