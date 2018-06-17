@@ -1,7 +1,7 @@
 # Pusher Clone
 
 ### Introduction
-This is a real-time server built with php and [ReactPHP](https://reactphp.org/) to mirror some of real-time pusher-clone.
+This is a real-time server built with php and [ReactPHP](https://reactphp.org/) to mirror some pusher features.
 
 This project was made to show some of my skills as a **Senior Software Engineer** please don't use it in your production project.
 
@@ -76,7 +76,7 @@ This is the basic logic needed for running your own pusher-like real-time server
 1. [ ] Implement Users registrations, plans system and billing.
 2. [ ] Dashboards for admin and every registered user.
 3. [ ] generates reports for requests and connected users and available channels.
-4. rewrite the whole server
+4. [ ] rewrite the whole server with NodeJS to support better performance.
 
 ## Contributes
 1. [Mohammed Manssour](https://mohammedmanssour.me).
