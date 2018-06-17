@@ -29,7 +29,6 @@ class Pusher extends Client{
     public function transmit($payload)
     {
         $decodedPayload = json_decode($payload);
-        dump($this->uniqueChannelName($decodedPayload));
         $this->getSession()->publish($this->uniqueChannelName($decodedPayload), [$decodedPayload->payload]);
     }
 

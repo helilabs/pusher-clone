@@ -11,6 +11,7 @@ use Illuminate\Console\Command;
 use App\Realtime\Auth\TokenAuth;
 use Thruway\Transport\RatchetTransportProvider;
 use Thruway\Authentication\AuthenticationManager;
+use App\Realtime\Auth\Subscription;
 
 
 class WampServerRunner extends Command{
@@ -44,7 +45,10 @@ class WampServerRunner extends Command{
         $pull = $context->getSocket(\ZMQ::SOCKET_PULL);
         $pull->bind(getenv('ZMQ_HOST'));
 
-        $router->registerModule(new AuthenticationManager);
+        $router->registerModules([
+            new AuthenticationManager(),
+            new Subscription()
+        ]);
 
         $router->addInternalClient(new TokenAuth(['default']));
 

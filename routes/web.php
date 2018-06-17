@@ -20,4 +20,5 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api', 'middleware' => AuthenticatePush::class], function($router){
     $router->post('/push', 'PushController@store');
+    $router->post('/push/auth', 'AuthorizationController@store');
 });
